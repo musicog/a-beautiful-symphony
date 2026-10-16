@@ -1,0 +1,44 @@
+schema_version: 3
+campaign:
+  name: "a-beautiful-symphony"
+  title: "A Title"
+  description: ""
+  instigator: "5521800"
+  repo_id: 1422274741
+  language: "en"
+  license: "CC-BY-4.0"
+automation:
+  central_repository: "lets-encode/lets-encode"
+  ref: "staging"
+  path: "scripts/coordinator.ts"
+source:
+  kind: "facsimile"
+  images:
+    - "sources/img/01.jpg"
+    - "sources/img/02.jpg"
+    - "sources/img/03.jpg"
+  header:
+    title: "Beautiful Music!"
+    composer: "Bach"
+    publisher: ""
+    date: ""
+  rights_acknowledged: "1"
+pieces:
+  - id: "piece-01"
+    kind: "facsimile"
+    preparation: "omr"
+    path: "sources/piece-01/score.mei"
+    zones:
+      - { surface: 1, ulx: 0, uly: 0, lrx: 1508, lry: 2297 }
+      - { surface: 2, ulx: 0, uly: 0, lrx: 1508, lry: 2297 }
+      - { surface: 3, ulx: 0, uly: 0, lrx: 1508, lry: 2297 }
+    header:
+      title: "Beautiful Music!"
+      composer: "Bach"
+fragmentation:
+  strategy: "by-piece"
+validation:
+  required_validations: 1
+  pass_threshold: 1
+locking:
+  stale_after_minutes: 1440
